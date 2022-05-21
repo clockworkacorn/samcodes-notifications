@@ -115,7 +115,7 @@ public class PresenterReceiver extends BroadcastReceiver {
 			intent = new Intent();
 		}
 		
-		PendingIntent pendingIntent = PendingIntent.getActivity(applicationContext, slot, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+		PendingIntent pendingIntent = PendingIntent.getActivity(applicationContext, slot, intent, PendingIntent.FLAG_IMMUTABLE);
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(applicationContext);
 		builder.setAutoCancel(true);
 		builder.setContentTitle(titleText);

@@ -116,7 +116,7 @@ class Common {
 		Intent alertIntent = new Intent(getNotificationName(slot));
 		alertIntent.setClass(context, PresenterReceiver.class);
 		
-		PendingIntent pendingIntent = PendingIntent.getBroadcast(context, slot, alertIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+		PendingIntent pendingIntent = PendingIntent.getBroadcast(context, slot, alertIntent, PendingIntent.FLAG_IMMUTABLE);
 		AlarmManager alarmManager = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
 		if(alarmManager != null) {
 			//if(Common.isDozeSupported() && Common.isDozeWhitelisted(context)) {
